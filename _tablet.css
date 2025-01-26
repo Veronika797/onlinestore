@@ -1,0 +1,64 @@
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 393px);
+    padding-right: calc(50% - 393px);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .item {
+    height: 268px;
+  }
+  .spec__tovar {
+    display: flex;
+    gap: 39px 29px;
+    flex-wrap: wrap;
+  }
+  .chep, .product {
+    width: 378px;
+  }
+  .katalog-list {
+    width: 786px;
+  }
+  .voda__description, .ronald__description, .vent__description,
+  .tatran__description, .vilora__description, .table__description,
+  .asketa__description, .lunar__description, .nastan__description,
+  .tatran__description {
+    font-size: 13px;
+  }
+  .footer__logo {
+    display: none;
+  }
+  .product-box {
+    display: flex;
+    gap: 29px;
+    flex-wrap: wrap;
+  }
+  .cart {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .conteiner {
+    width: 786px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 29px;
+    padding-bottom: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 833px) {
+  .center {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .chep, .product {
+    width: 345px;
+  }
+  .prox {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+}/*# sourceMappingURL=_tablet.css.map */

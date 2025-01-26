@@ -1,0 +1,214 @@
+
+.basket {
+    height: 400px;
+    background-image: url(IMAGE/basketbgr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &-top {
+        padding-top: 127px;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 70px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $gap;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    &__content {
+        grid-column: span 8;
+    }
+    &__name-box {
+        padding-right: 27px;
+        padding-left: 3px;
+        padding-bottom: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.5px;
+        color: rgba(0, 0, 0, 1);
+    }
+    &__item {
+        border-top: 0.5px solid rgb(202, 205, 216);
+        padding-top: 25px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__left {
+        display: flex;
+        gap: 31px;
+    }
+    &__img {
+        width: 173px;
+    }
+    &__heading {
+        color: rgb(0, 0, 0);
+        font-size: $baseFontSize;
+        font-weight: 500;
+        line-height: 29px;
+        padding-bottom: 14px;
+    }
+    &__description {
+        color: rgb(136, 136, 136);
+        width: 276px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        padding-bottom: 16px;
+    }
+    &__price {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        padding-bottom: 15px;
+    }
+    &__link-box {
+        display: flex;
+        gap: 30px;
+    }
+    &__link {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 210%;
+        text-decoration-line: underline;
+    }
+    &__list {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 29.4px;
+        text-align: center;
+        color: rgba(0, 0, 0, 1);
+    }
+    &__number {
+        color: rgb(0, 0, 0);
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 210%;
+        text-align: center;
+        width: 71px;
+        height: 51px;
+        border-radius: 6px;
+        border: 1px solid rgb(247, 246, 246);
+        background-color: rgb(247, 246, 246);
+    }
+    &__but {
+        padding-top: 18px;
+        display: flex;
+        gap: 7px;
+    }
+    &__but-pro {
+        font-family: $font-stack;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.07px;
+        color: rgb(2, 2, 2);
+        width: 200px;
+        height: 37px;
+        box-sizing: border-box;
+        background: transparent;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    &__form {
+        width: 379px;
+        background: #F7F6F6;
+        border-radius: 20px;
+        height: 556px;
+        grid-column: span 4;
+    }
+    &__forma {
+        font-size: $baseFontSize;
+        font-weight: 700;
+        line-height: 29.26px;
+        text-align: center;
+        padding-top: 42px;
+    }
+    &__oform {
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+        text-decoration: none;
+        padding-left: 27px;
+        padding-right: 64px;
+        padding-top: 35px;
+        padding-bottom: 64px;
+    }
+    &__informa {
+        font-family: $font-stack;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.07px;
+        border: none;
+        background: rgb(247, 246, 246);
+        border-bottom: 1px solid rgb(202, 205, 216);
+    }
+    &__sum {
+        color: rgb(0, 0, 0);
+        font-size: $baseFontSize;
+        font-weight: 500;
+        line-height: 29px;
+        text-align: center;
+        padding-bottom: 18px;
+    }
+    &__summa {
+        font-weight: 400;
+    }
+    &__button {
+        padding-left: 45px;
+    }
+    &__btn {
+        font-family: $font-stack;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 10px 77px 11px 76px;
+        border-radius: 20px;
+        border: 1px solid rgba(4, 4, 4, 1);
+        cursor: pointer;
+        background: transparent;
+    }
+}
+
+.tatran__price-btn, .vilora__price-btn, .table__price-btn {
+    font-weight: 500;
+    font-size: $baseFontSize;
+    line-height: 29px;
+    text-decoration-line: line-through;
+    color: #888888;
+}
+
+.spec {
+    &-basket {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: calc($baseFontSize * 2);
+        line-height: 59px;
+        color: black;
+        margin-bottom: 55px;
+    }
+    
+    &-btn {
+        width: 155px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(0, 0, 0);
+        text-decoration-line: underline;
+    }
+}
+
