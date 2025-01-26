@@ -61,20 +61,194 @@
         <div><img src="IMAGE/slesh.svg" alt="slesh"></div>
         <div><a href="catalog.html" class="info-x">Каталог товаров</a></div>
     </div>
-<div class="form__filter">
-<div class="filter" id="modalForm">
-<div class="forma btn">
-    <!-- <select class="select" name="label" id="list">
-        <option value="#">Фильтрация</option> 
-    </select> -->
-    <button class="select" onclick="show('block')">Фильтрация</button>
-    <div id="filter" onclick="show('filter')"></div>
-    <select class="popular" name="popular" id="list-popular">
-        <option value="#">По популярности</option>
-        <option value="#">Сперва новые</option>
-    </select>
-</div>
-<form class="filtering-form" action="#" method="get">
+    <div class="form__filter">
+        <div class="filter">
+        <!-- <div class="forma">
+            <select class="select" name="label" id="list">
+                <option value="#">Фильтрация</option> 
+            </select>
+            <select class="popular" name="popular" id="list-popular">
+                <option value="#">По популярности</option>
+                <option value="#">Сперва новые</option>
+            </select>
+        </div> -->
+
+        <!--  -->
+        <button id="filterButton" class="select">Фильтрация</button>
+        <button class="popular" id="list-popular">По популярности</button>
+        <details id="filterModal" class="modal">
+            <summary class="modal-summary"></summary>
+            <div class="modal-content">
+                <!-- <h2>Фильтрация</h2> -->
+               
+                <!-- <p>Здесь вы можете настроить параметры фильтрации.</p> -->
+                <span class="close">Закрыть</span>
+                <!-- Добавьте элементы фильтрации здесь -->
+                <form class="filtering-form" action="#" method="get">
+                    <div class="filter-form__content">
+                        <div class="content-position">
+                            <div class="filter-form__content-left">
+                            <fieldset class="filter-form__content-fieldset">
+                                <legend class="filter-form__content-legend">Сроки доставки</legend>
+                            <div class="radio">
+                                <div class="radio-time">
+                                    <input class="radio__input" type="radio" id="any" name="delivery-time">
+                                    <label class="radio__label" for="any">Неважно</label>
+                                </div>
+                                <div class="radio-time">    
+                                    <input class="radio__input" type="radio" id="today" name="delivery-time">
+                                    <label class="radio__label" for="today">Сегодня</label>
+                                </div>
+                                <div class="radio-time">   
+                                    <input class="radio__input" type="radio" id="tomorrow" name="delivery-time">
+                                    <label class="radio__label" for="tomorrow">Завтра</label>
+                                </div>
+                                <div class="radio-time">    
+                                    <input class="radio__input" type="radio" id="three-days" name="delivery-time">
+                                    <label class="radio__label" for="three-days">До 3 дней</label>
+                                </div>
+                                <div class="radio-time">   
+                                    <input class="radio__input" type="radio" id="seven-days" name="delivery-time">
+                                    <label class="radio__label" for="seven-days">До 7 дней</label>
+                                </div>
+                            </div>
+                            </fieldset>
+                        <fieldset class="filter-form__content-fieldset">
+                                <legend class="filter-form__content-legend">Цена</legend>
+                            <div class="range">
+                                <label class="range__label"><span class="range__label-sum">от 0 руб.</span>до 100000 руб.</label>
+                                <div class="range__slider">
+                                    <input class="range__input range__input--min" name="range_1" type="range" min="1" max="100000" value="1">
+                                    <input class="range__input range__input--max" name="range_1" type="range" min="1" max="100000" value="100000">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="filter-form__content-fieldset">
+                            <legend class="filter-form__content-legend">Цвет</legend>
+                        <div class="checkbox__label--color">
+                            <div class="checkbox__color">
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-white">
+                                        <label class="checkbox-label checkbox__color--white" for="color-white"></label>
+                                 </div>
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-black">
+                                        <label class=" checkbox-label checkbox__color--black" for="color-black">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 3L4.5 6.5L7.5 0.5" stroke="white"/></svg>
+                                        </label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-gray">
+                                        <label class="checkbox-label checkbox__color--gray" for="color-gray"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-red">
+                                        <label class="checkbox-label checkbox__color--red" for="color-red"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-orange">
+                                        <label class="checkbox-label checkbox__color--orange" for="color-orange"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-yellow">
+                                        <label class="checkbox-label checkbox__color--yellow" for="color-yellow"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                        <input class="checkbox__input" type="checkbox" id="color-green">
+                                        <label class="checkbox-label checkbox__color--green" for="color-green"></label>
+                                </div>
+                            </div>
+                            <div class="checkbox__color">
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-ligthgreen">
+                                    <label class="checkbox-label checkbox__color--ligthgreen" for="color-ligthgreen"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-blue">
+                                    <label class="checkbox-label checkbox__color--blue" for="color-blue"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-darkblue">
+                                    <label class="checkbox-label checkbox__color--darkblue" for="color-darkblue"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-darkpurple">
+                                    <label class="checkbox-label checkbox__color--darkpurple" for="color-darkpurple"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-purple">
+                                    <label class="checkbox-label checkbox__color--purple" for="color-purple"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-ligthpurple">
+                                    <label class="checkbox-label checkbox__color--ligthpurple" for="color-ligthpurple"></label>
+                                </div>
+                                <div class="checkbox__color-options">
+                                    <input class="checkbox__input" type="checkbox" id="color-pink">
+                                    <label class="checkbox-label checkbox__color--pink" for="color-pink"></label>
+                                </div>
+                            </div>
+                            </div>
+                        </fieldset>
+                            </div>
+                        <div class="filter-form__content-rigth">
+                            <fieldset class="filter-form__content-fieldset">
+                                <legend class="filter-form__content-legend">Тип комнаты</legend>
+                            <div class="checkbox">
+                            <div class="checkbox__type">
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="kitchen-dining">
+                                    <label class="checkbox__label" for="kitchen-dining">Кухня и столовая</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="bathroom">
+                                    <label class="checkbox__label" for="bathroom">Ванная комната</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="kids-room">
+                                    <label class="checkbox__label" for="kids-room">Детская комната</label>
+                                 </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="home-office">
+                                    <label class="checkbox__label" for="home-office">Домашний офис</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="living-room">
+                                    <label class="checkbox__label" for="living-room">Гостиная</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="hallway">
+                                    <label class="checkbox__label" for="hallway">Прихожая</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="bedroom">
+                                    <label class="checkbox__label" for="bedroom">Спальня</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="dressing-room">
+                                    <label class="checkbox__label" for="dressing-room">Гардероб</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="cottage">
+                                    <label class="checkbox__label" for="cottage">Дача</label>
+                                </div>
+                                <div class="room-type">
+                                    <input class="checkbox__input" type="checkbox" id="lighting">
+                                    <label class="checkbox__label" for="lighting">Свет</label>
+                                </div>
+                            </div>
+                            </div>
+                            </fieldset>
+                        </div>
+                        </div>
+                        <button type="submit" class="filter-form__button button">Применить</button>
+                    </div>
+                </form>
+            </div>
+        </details>
+        <!--  -->
+<!-- <form class="filtering-form" action="#" method="get">
     <div class="filter-form__content">
         <div class="content-position">
             <div class="filter-form__content-left">
@@ -234,7 +408,7 @@
         </div>
         <button type="submit" class="filter-form__button button">Применить</button>
     </div>
-</form>
+</form> -->
 </div>
 </div>
 </div>

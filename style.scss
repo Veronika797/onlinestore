@@ -677,20 +677,23 @@ body {
 }
 
 .select {
-    // background-image: url(IMAGE/miniature.jpeg);
+    background-image: url(IMAGE/miniature.jpeg);
     background-color: #ffffff;
     background-repeat: no-repeat;
-    background-position: 140px;
+    // background-position: 140px;
+    background-position: 172px;
     appearance: none;
     box-sizing: border-box;
     border: 1px solid rgb(196, 196, 196, 1);
     border-radius: 20px;
-    width: 182px;
+    // width: 182px;
+    width: 207px;
     height: 40px;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     // padding-left: 23px;
+    padding-left: 0;
     font-family: $font-stack;
     cursor: pointer;
 }
@@ -698,17 +701,21 @@ body {
 .popular {
     background-image: url(IMAGE/miniature.jpeg);
     background-repeat: no-repeat;
-    background-position: 180px;
+    background-color: #ffffff;
+    // background-position: 180px;
+    background-position: 203px;
     appearance: none;
     box-sizing: border-box;
     border: 1px solid rgb(196, 196, 196, 1);
     border-radius: 20px;
-    width: 227px;
+    // width: 227px;
+    width: 240px;
     height: 40px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    padding-left: 23px;
+    // padding-left: 23px;
+    padding-left: 0;
     color: rgb(0, 0, 0);
     font-family: $font-stack;
 }
@@ -780,6 +787,37 @@ body {
     &__informa:focus {
         outline: none;
     }
+}
+
+
+// 
+.modal {
+    display: none; /* Скрыть модальное окно по умолчанию */
+}
+
+.modal[open] {
+    display: block; /* Показать модальное окно, когда оно открыто */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    // margin: 15% auto; /* 15% сверху и центрирование */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    // width: 80%; /* Ширина */
+    width: 30%;
+}
+
+.close {
+    color: #aaa;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+}
+
+.close:hover {
+    color: black;
 }
 
 @import 'basket';
