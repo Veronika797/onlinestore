@@ -224,18 +224,26 @@
 
     .select {
         width: 164px;
-        padding-left: 19px;
-        background-position: 125px;
+        // padding-left: 19px;
+        padding-left: 0;
+        // background-position: 125px;
+        background-position: 133px;
         font-size: 14px;
         line-height: 17px;
     }
 
     .popular {
         width: 203px;
-        padding-left: 19px;
-        background-position: 165px;
+        // padding-left: 19px;
+        padding-left: 0;
+        // background-position: 165px;
+        background-position: 171px;
         font-size: 14px;
         line-height: 17px;
+    }
+
+    .modal-content {
+        width: 97%;
     }
 
     .product-box {

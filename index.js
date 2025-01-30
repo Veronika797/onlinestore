@@ -1,24 +1,20 @@
-// let modal = document.getElementById("filterModal");
-// console.log(modal);
-// let btn = document.getElementById("openModal");
-// console.log(btn);
-// let span = document.getElementById("closeModal");
+var modal = document.getElementById("filterModal");
+var btn = document.getElementById("filterButton");
+var closeBtn = document.querySelector(".close");
 
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
-let show = function(state) {
-    document.getElementById('modalForm').style.display = state;
-    document.getElementById('filter').style.display = state;
+// Открыть модальное окно при нажатии на кнопку
+btn.onclick = function() {
+    modal.setAttribute("open", "true");
 }
+
+// Закрыть модальное окно при нажатии на "Закрыть"
+closeBtn.onclick = function() {
+    modal.removeAttribute("open");
+}
+
+// Закрыть модальное окно при нажатии вне его
+modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.removeAttribute("open");
+    }
+});
